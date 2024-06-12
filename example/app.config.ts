@@ -25,7 +25,15 @@ const config: ExpoConfig = {
 			backgroundColor: "#ff9486",
 		},
 	},
-	plugins: ["expo-router"],
+	plugins: [
+		[
+			"expo-dev-launcher",
+			{
+				launchMode: "most-recent",
+			},
+		],
+		"expo-router",
+	],
 	experiments: {
 		typedRoutes: true,
 	},
