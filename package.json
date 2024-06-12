@@ -4,6 +4,7 @@
 	"description": "React native charts based on @shopify/react-native-skia for high performance",
 	"packageManager": "pnpm@9.3.0",
 	"scripts": {
+		"dev": "turbo dev",
 		"lint": "turbo lint",
 		"lint:fix": "turbo lint:fix"
 	},
