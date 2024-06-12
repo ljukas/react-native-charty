@@ -10,12 +10,14 @@
 				"paths": ["../node_modules/.cache/turbo"]
 			},
 			"env": {
-				"EXPO_USE_FAST_RESOLVER": "true"
+				"EXPO_USE_FAST_RESOLVER": "true",
+				"NODE_ENV": "production"
 			}
 		},
 		"simulator": {
 			"extends": "base",
 			"distribution": "internal",
+			"developmentClient": true,
 			"ios": {
 				"simulator": true
 			}
@@ -23,6 +25,7 @@
 		"development": {
 			"extends": "base",
 			"distribution": "internal",
+			"developmentClient": true,
 			"android": {
 				"buildType": "apk"
 			}

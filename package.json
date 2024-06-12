@@ -6,7 +6,8 @@
 	"scripts": {
 		"dev": "turbo dev",
 		"lint": "turbo lint",
-		"lint:fix": "turbo lint:fix"
+		"lint:fix": "turbo lint:fix",
+		"build:example": "turbo build --filter=example"
 	},
 	"author": "Lukas Lindqvist",
 	"license": "MIT",

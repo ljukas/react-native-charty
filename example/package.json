@@ -4,11 +4,13 @@
 	"version": "1.0.0",
 	"scripts": {
 		"dev": "npx expo",
+		"build": "expo export --output-dir ./build --platform all",
 		"android": "npx expo run:android",
 		"ios": "npx expo run:ios",
 		"test": "jest --watchAll",
 		"lint": "biome lint ./src",
-		"lint:fix": "biome lint --write ./src"
+		"lint:fix": "biome lint --write ./src",
+		"eas-build-post-install": "pnpm run -w build:example"
 	},
 	"jest": {
 		"preset": "jest-expo"

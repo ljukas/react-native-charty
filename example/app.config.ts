@@ -2,7 +2,7 @@ import type { ExpoConfig } from "expo/config";
 import "ts-node/register";
 
 const config: ExpoConfig = {
-	name: "react-native-charty",
+	name: "Charty",
 	slug: "react-native-charty",
 	version: "1.0.0",
 	orientation: "portrait",
