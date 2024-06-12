@@ -1,0 +1,36 @@
+{
+	"name": "react-native-charty",
+	"version": "0.0.1",
+	"private": "false",
+	"scripts": {
+		"dev": "tsc --watch",
+		"lint": "biomo lint ./src",
+		"lint:fix": "biomo lint --write ./src",
+		"build": "rm -rf dist && tsc"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ljukas/react-native-charty.git"
+	},
+	"react-native": "src/index",
+	"types": "dist/index.d.ts",
+	"main": "dist/index.js",
+	"exports": {
+		".": [
+			{
+				"import": "./dist/index.js",
+				"types": "./dist/index.d.ts"
+			},
+			"./dist/index.js"
+		]
+	},
+	"files": ["src", "dist"],
+	"peerDependencies": {
+		"react": "*",
+		"react-native": "*",
+		"@shopify/react-native-skia": ">=1.2.3",
+		"react-native-reanimated": ">=3.0.0",
+		"react-native-gesture-handler": ">=2.0.0"
+	}
+}
