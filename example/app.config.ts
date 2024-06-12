@@ -7,7 +7,7 @@ const config: ExpoConfig = {
 	version: "1.0.0",
 	orientation: "portrait",
 	icon: "./assets/images/icon.png",
-	scheme: "myapp",
+	scheme: "react-native-charty",
 	userInterfaceStyle: "automatic",
 	splash: {
 		image: "./assets/images/splash.png",
@@ -24,11 +24,6 @@ const config: ExpoConfig = {
 			foregroundImage: "./assets/images/adaptive-icon.png",
 			backgroundColor: "#ff9486",
 		},
-	},
-	web: {
-		bundler: "metro",
-		output: "static",
-		favicon: "./assets/images/favicon.png",
 	},
 	plugins: ["expo-router"],
 	experiments: {
