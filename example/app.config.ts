@@ -12,15 +12,17 @@ const config: ExpoConfig = {
 	splash: {
 		image: "./assets/images/splash.png",
 		resizeMode: "contain",
-		backgroundColor: "#ffffff",
+		backgroundColor: "#ff9486",
 	},
 	ios: {
+		bundleIdentifier: "com.ljukas.reactnativecharty",
 		supportsTablet: true,
 	},
 	android: {
+		package: "com.ljukas.reactnativecharty",
 		adaptiveIcon: {
 			foregroundImage: "./assets/images/adaptive-icon.png",
-			backgroundColor: "#ffffff",
+			backgroundColor: "#ff9486",
 		},
 	},
 	web: {
