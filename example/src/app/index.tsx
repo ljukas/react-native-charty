@@ -10,7 +10,7 @@ export default function Splash() {
 	useFocusEffect(
 		useCallback(() => {
 			setTimeout(() => {
-				router.replace("/(tabs)");
+				router.replace("/(tabs)/lineChart");
 			}, 1000);
 		}, [router]),
 	);

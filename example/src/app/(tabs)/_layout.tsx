@@ -10,6 +10,7 @@ export default function TabLayout() {
 
 	return (
 		<Tabs
+			initialRouteName="lineChart"
 			screenOptions={{
 				tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
 				headerShown: false,
