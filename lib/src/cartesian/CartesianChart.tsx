@@ -1,4 +1,4 @@
-import { Canvas, Group, rect } from "@shopify/react-native-skia";
+import { Canvas } from "@shopify/react-native-skia";
 import { useCallback, useMemo, useState } from "react";
 import { StyleSheet, type LayoutChangeEvent } from "react-native";
 import {
@@ -103,34 +103,20 @@ const CartesianChartComp = <
 		) as PointsArg;
 	}, [yKeys, tData]);
 
-	// const renderArg: CartesianChartRenderArg<Data, XK, YK> = useMemo(
-	// 	() => ({
-	// 		xScale,
-	// 		yScale,
-	// 		chartBounds,
-	// 		canvasSize: size,
-	// 		points,
-	// 	}),
-	// 	[xScale, yScale, chartBounds, size, points],
-	// );
-	const renderArg: CartesianChartRenderArg<Data, XK, YK> = {
-		xScale,
-		yScale,
-		chartBounds,
-		canvasSize: size,
-		points,
-	};
-
-	const clipRect = rect(
-		chartBounds.left,
-		chartBounds.top,
-		chartBounds.right,
-		chartBounds.bottom,
+	const renderArg: CartesianChartRenderArg<Data, XK, YK> = useMemo(
+		() => ({
+			xScale,
+			yScale,
+			chartBounds,
+			canvasSize: size,
+			points,
+		}),
+		[xScale, yScale, chartBounds, size, points],
 	);
 
 	return (
 		<Canvas style={styles.canvas} onLayout={onLayout}>
-			<Group clip={clipRect}>{hasMeasuredSize && children(renderArg)}</Group>
+			{hasMeasuredSize && children(renderArg)}
 		</Canvas>
 	);
 };

@@ -89,7 +89,7 @@ export const transformInputData = <
 	 * which causes issues with rendering the chart.
 	 * Domain is flipped since we are working with a canvas where the origin is at the top left
 	 */
-	const yScaleDomain = yMax === yMin ? [yMin - 1, yMax + 1] : [yMin, yMax];
+	const yScaleDomain = yMax === yMin ? [yMax + 1, yMin - 1] : [yMax, yMin];
 
 	const bottomPadding =
 		typeof chartPadding === "number" ? chartPadding : chartPadding?.bottom ?? 0;
@@ -100,7 +100,7 @@ export const transformInputData = <
 	const rightPadding =
 		typeof chartPadding === "number" ? chartPadding : chartPadding?.right ?? 0;
 
-	const yScaleRange = [bottomPadding, canvasSize.height - topPadding];
+	const yScaleRange = [topPadding, canvasSize.height - bottomPadding];
 
 	const yScale = scaleLinear().domain(yScaleDomain).range(yScaleRange).nice();
 
