@@ -5,6 +5,7 @@
 	"packageManager": "pnpm@9.3.0",
 	"scripts": {
 		"dev": "turbo dev",
+		"test": "turbo test",
 		"lint": "turbo lint",
 		"lint:fix": "turbo lint:fix",
 		"build:example": "turbo build --filter=example"
