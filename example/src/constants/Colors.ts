@@ -24,3 +24,18 @@ export const Colors = {
 		tabIconSelected: tintColorDark,
 	},
 };
+
+const test = {
+	light: {
+		main: "#ff9487",
+		secondary: "#b46a73",
+		tertiary: "#ee9499",
+		caption: "#f8aca5",
+	},
+	dark: {
+		main: "#e17669",
+		secondary: "#964c60",
+		tertiary: "#d0767b",
+		caption: "#da8e87",
+	},
+};
